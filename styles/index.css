@@ -13,10 +13,10 @@ body{
     width: 100%;
     height: 490px;
     background-image: 
-    linear-gradient(hsl(13, 100%, 72%), hsl(353, 100%, 62%)), 
-    url('../images/illustration-editor-mobile.svg');
-    background-position: center;
-    background-size: cover;
+    url('../images/bg-pattern-intro-mobile.svg'),
+    linear-gradient(hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    background-position:top;
+    background-size: 40rem;
     background-repeat: no-repeat;
     border-radius: 0%  0% 0% 30%;
 
@@ -280,6 +280,11 @@ h3{
     .box1{
         border-radius: 0%;
         height: 500px;
+        background-image: 
+        url('../images/bg-pattern-intro-desktop.svg'),
+        linear-gradient(hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+        background-position:center;
+        background-size: cover;
     }
     .head{
         height: 80px;
