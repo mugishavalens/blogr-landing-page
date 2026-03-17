@@ -1,190 +1,290 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="images/favicon-32x32.png" rel="stylesheet">
-    <link href="styles/index.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div class="container">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blogr</title>
+    <meta
+      name="description"
+      content="A modern publishing platform with an extensible editor, robust content management, and powerful tooling."
+    />
 
+    <link rel="icon" type="image/svg+xml" href="/images/logo.svg" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
 
+    <link rel="stylesheet" href="/src/styles/index.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-        <div class="box1">
+    <header class="hero">
+      <div class="container hero__inner">
+        <div class="topbar" role="banner">
+          <div class="brand">
+            <a href="/" aria-label="Blogr home">
+              <img src="/images/logo.svg" alt="Blogr" />
+            </a>
+          </div>
 
-            <div class="head">
-
-                <div class="left">      
-                <img src="images/logo.svg" class="lg">
-                <span class="stay">
-                    <li>product <img src="images/icon-arrow-dark.svg" width="15px"></li>
-                    <li>company <img src="images/icon-arrow-dark.svg" width="15px"></li>
-                    <li>connect <img src="images/icon-arrow-dark.svg" width="15px"  class="imge1"></li>
-                </span>
-                </div>
-
-                <div class="right">
-                <button class="button5"> Log in</button>
-                <button class="button6"> Sign up</button>
-                <img src="images/icon-hamburger.svg" class="menu">
-                </div>
+          <nav class="nav" aria-label="Primary">
+            <div class="nav__group" data-dropdown data-open="false">
+              <button
+                class="nav__button"
+                type="button"
+                aria-expanded="false"
+                aria-controls="menu-product"
+                data-dropdown-button
+              >
+                Product <img class="chev" src="/images/icon-arrow-light.svg" alt="" />
+              </button>
+              <ul id="menu-product" class="nav__menu" hidden data-dropdown-menu>
+                <li><a href="#">Overview</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Marketplace</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Integrations</a></li>
+              </ul>
             </div>
 
-            <div class="list">
-
-                <div class="head1">
-                    <img src="images/icon-close.svg" class="close" >
-                </div>
-
-                <div class="low">
-                <ul>
-                 <li>product <img src="images/icon-arrow-dark.svg" width="15px"></li>
-                 <li>company <img src="images/icon-arrow-dark.svg" width="15px"></li>
-                 <li>connect <img src="images/icon-arrow-dark.svg" width="15px"  class="imge"></li>
-                </ul>
-                 <div class="info">
-                     <li class="l1">Contact</li>
-                     <li class="l1">Newsletter</li>
-                     <li class="l1"> LinkedIn</li>
-                 </div>
-                 <div class="line"></div>
-                 <button class="button3"> Log in</button>
-                 <button class="button4"> Sign up</button>
-                </div>
-            </div> 
-
-            <div class="title">
-                <h1> A modern <span class="pl"> publishing </span> plartform</h1>
-                <p> Grow your audience and built your online brand </p>
+            <div class="nav__group" data-dropdown data-open="false">
+              <button
+                class="nav__button"
+                type="button"
+                aria-expanded="false"
+                aria-controls="menu-company"
+                data-dropdown-button
+              >
+                Company <img class="chev" src="/images/icon-arrow-light.svg" alt="" />
+              </button>
+              <ul id="menu-company" class="nav__menu" hidden data-dropdown-menu>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Careers</a></li>
+              </ul>
             </div>
-            <div class="buttons">
-                <button class="button1"> start for free </button>
-                <button class="button2"> Learn more </button>
+
+            <div class="nav__group" data-dropdown data-open="false">
+              <button
+                class="nav__button"
+                type="button"
+                aria-expanded="false"
+                aria-controls="menu-connect"
+                data-dropdown-button
+              >
+                Connect <img class="chev" src="/images/icon-arrow-light.svg" alt="" />
+              </button>
+              <ul id="menu-connect" class="nav__menu" hidden data-dropdown-menu>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Newsletter</a></li>
+                <li><a href="#">LinkedIn</a></li>
+              </ul>
             </div>
+          </nav>
+
+          <div class="auth" aria-label="Authentication">
+            <button class="btn btn--ghost" type="button">Login</button>
+            <button class="btn btn--primary" type="button">Sign Up</button>
+          </div>
+
+          <button
+            class="mobile-open"
+            type="button"
+            aria-label="Open menu"
+            aria-controls="mobile-panel"
+            aria-expanded="false"
+            data-mobile-open
+          >
+            <img src="/images/icon-hamburger.svg" alt="" />
+          </button>
         </div>
 
+        <div class="hero__copy">
+          <h1>A modern publishing platform</h1>
+          <p>Grow your audience and build your online brand.</p>
+          <div class="hero__actions">
+            <button class="btn btn--primary" type="button">Start for Free</button>
+            <button class="btn btn--outline" type="button">Learn More</button>
+          </div>
+        </div>
+      </div>
 
-
-        <div class="box2">
-            <div class="begin"> Designed for the future </div>
-            <img src="images/illustration-editor-mobile.svg" class="pattern1">
-            
-            <div class="text">
-                <div class="fist">
-                    <h2 class="we"> Introducing an extensible editor</h2>
-                    <p class="para">
-                        Blogr features an exceedingly intuitive 
-                        interface which lets you focus on one 
-                        thing: creating content. The editor 
-                        supports management of multiple blogs 
-                        ans allows easy manipulation of embeds 
-                        such as images, video, and Maerkdown. 
-                        Extensibility with plugins and themes 
-                        provide easy ways to add functionality or change the looks of a blog.
-                    </p>
-                </div>
-                <div class="second">
-                    <h2 class="we">Robust content management</h2>
-                    <p class="para">
-                        Flexibility content management enables
-                        users to easily move through posts.
-                        Increase the usability of yur blog by 
-                        adding customized categories, sections. 
-                        format, or flow. With this functionality, you're in full control. 
-                    </p>
-                </div>
-            </div>
+      <div class="backdrop" hidden data-mobile-backdrop></div>
+      <div
+        id="mobile-panel"
+        class="mobile-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Mobile menu"
+        tabindex="-1"
+        hidden
+        data-mobile-panel
+      >
+        <div class="mobile-panel__top">
+          <button class="mobile-close" type="button" aria-label="Close menu" data-mobile-close>
+            <img src="/images/icon-close.svg" alt="" />
+          </button>
         </div>
 
+        <nav class="mobile-nav" aria-label="Mobile">
+          <div class="acc" data-accordion>
+            <button class="acc__btn" type="button" aria-expanded="false" data-accordion-button>
+              Product <img class="chev" src="/images/icon-arrow-dark.svg" alt="" />
+            </button>
+            <ul class="acc__body" hidden data-accordion-body>
+              <li><a href="#">Overview</a></li>
+              <li><a href="#">Pricing</a></li>
+              <li><a href="#">Marketplace</a></li>
+              <li><a href="#">Features</a></li>
+              <li><a href="#">Integrations</a></li>
+            </ul>
+          </div>
 
+          <div class="acc" data-accordion>
+            <button class="acc__btn" type="button" aria-expanded="false" data-accordion-button>
+              Company <img class="chev" src="/images/icon-arrow-dark.svg" alt="" />
+            </button>
+            <ul class="acc__body" hidden data-accordion-body>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Team</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Careers</a></li>
+            </ul>
+          </div>
 
+          <div class="acc" data-accordion>
+            <button class="acc__btn" type="button" aria-expanded="false" data-accordion-button>
+              Connect <img class="chev" src="/images/icon-arrow-dark.svg" alt="" />
+            </button>
+            <ul class="acc__body" hidden data-accordion-body>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Newsletter</a></li>
+              <li><a href="#">LinkedIn</a></li>
+            </ul>
+          </div>
 
+          <div class="mobile-auth">
+            <button class="btn btn--ghost" type="button">Login</button>
+            <button class="btn btn--primary" type="button">Sign Up</button>
+          </div>
+        </nav>
+      </div>
+    </header>
 
-        <div class="box3">
-            <img src="images/illustration-phones.svg" class="phone">
-            <div class="unique">
-                <h3> State of the Art infrastructure </h3>
-                <p class="para1">
-                    with reliability and speed in mind,
-                    worldwide data centers provide the 
-                    backbone for ultra-fast connectivity. This 
-                    ensures your site will load instantly, no
-                    matter where your readers are, keeping 
-                    your site competitive.
-                </p>
+    <main id="main">
+      <section class="editor" aria-labelledby="designed">
+        <div class="container">
+          <h2 id="designed" class="section-title">Designed for the future</h2>
+          <div class="grid-2 editor__wrap">
+            <picture class="editor__art">
+              <source media="(min-width: 48rem)" srcset="/images/illustration-editor-desktop.svg" />
+              <img src="/images/illustration-editor-mobile.svg" alt="" />
+            </picture>
+
+            <div class="copy">
+              <h3>Introducing an extensible editor</h3>
+              <p>
+                Blogr features an exceedingly intuitive interface which lets you focus on one thing:
+                creating content. The editor supports management of multiple blogs and allows easy
+                manipulation of embeds such as images, videos, and Markdown. Extensibility with
+                plugins and themes provides easy ways to add functionality or change the looks of a
+                blog.
+              </p>
+
+              <h3>Robust content management</h3>
+              <p>
+                Flexible content management enables users to easily move through posts. Increase the
+                usability of your blog by adding customized categories, sections, format, or flow.
+                With this functionality, you’re in full control.
+              </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="infra">
+        <div class="container infra__inner">
+          <img class="phones" src="/images/illustration-phones.svg" alt="" />
+          <div class="copy">
+            <h2>State of the Art Infrastructure</h2>
+            <p>
+              With reliability and speed in mind, worldwide data centers provide the backbone for
+              ultra-fast connectivity. This ensures your site will load instantly, no matter where
+              your readers are, keeping your site competitive.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="laptop">
+        <div class="container">
+          <div class="grid-2">
+            <picture class="laptop__art">
+              <source media="(min-width: 48rem)" srcset="/images/illustration-laptop-desktop.svg" />
+              <img src="/images/illustration-laptop-mobile.svg" alt="" />
+            </picture>
+
+            <div class="copy">
+              <h2>Free, open, simple</h2>
+              <p>
+                Blogr is a free and open source application backed by a large community of helpful
+                developers. It supports features such as code syntax highlighting, RSS feeds, social
+                media integration, third-party commenting tools, and works seamlessly with Google
+                Analytics. The architecture is clean and is relatively easy to learn.
+              </p>
+
+              <h2>Powerful tooling</h2>
+              <p>
+                Batteries included. We built a simple and straightforward CLI tool that makes
+                customization and deployment a breeze, but is capable of producing even the most
+                complicated sites.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="footer__brand">
+          <a href="/" aria-label="Blogr home">
+            <img src="/images/logo.svg" alt="Blogr" />
+          </a>
         </div>
 
-
-
-        <div class="box4">
-            <img src="images/illustration-laptop-mobile.svg" class="pattern2">
-            <div class="free">
-              <div class="fist">
-                <h2> Free, open, simple </h2>
-                <p class="para">
-                    Blogr is a free and open source 
-                    appliacation backed by a large community 
-                    of helpful developers. It supports features
-                    such as code syntax highlighting, RSS
-                    feeds, social media integration, third-
-                    party commeting tools, and works
-                    seamlessly with Google Analytics. The 
-                    architecture is clean and is relatively easy to learn
-                </p>
-              </div>
-              <div class="second">
-                <h2> Powerful tooling</h1>
-                <p class="para">
-                    Batteries include. We built a sample and 
-                    straightforward CLI tool that makes 
-                    customization and deployment a breeze.
-                    but capable of producing even the most
-                    complicated sites.
-                </p>
-            </div>
+        <div class="footer__cols" aria-label="Footer links">
+          <div class="footer__col">
+            <h3>Product</h3>
+            <a href="#">Overview</a>
+            <a href="#">Pricing</a>
+            <a href="#">Marketplace</a>
+            <a href="#">Features</a>
+            <a href="#">Integrations</a>
+          </div>
+          <div class="footer__col">
+            <h3>Company</h3>
+            <a href="#">About</a>
+            <a href="#">Team</a>
+            <a href="#">Blog</a>
+            <a href="#">Careers</a>
+          </div>
+          <div class="footer__col">
+            <h3>Connect</h3>
+            <a href="#">Contact</a>
+            <a href="#">Newsletter</a>
+            <a href="#">LinkedIn</a>
+          </div>
         </div>
-        </div>
+      </div>
+    </footer>
 
-
-
-        
-        <div class="box5">
-            <img src="images/logo.svg" class="last">
-            <div class="footer1">
-              <div class="product"> Product </div>
-              <div class="over"> Overview </div>
-              <div class="over"> Pricing </div>
-              <div class="over"> Marketplace </div>
-              <div class="over"> Features </div>
-              <div class="over"> integrations </div>
-            </div>
-
-            <div class="footer2">
-                <div class="product">Campany </div>
-                <div class="over">About </div>
-                <div class="over">Team </div>
-                <div class="over">blog  </div>
-                <div class="over">Careers </div>
-            </div>
-
-            <div class="footer3">
-                <div class="product"> Connect </div>
-                <div class="over">    Contacts   </div>
-                <div class="over">    Newsletter </div>
-                <div class="over">    LinkedIn   </div>
-              </div>
-        
-        </div>
-
-
-    </div>
-    <script src="javascript/index.js"></script>
-</body>
+    <script type="module" src="/src/main.js"></script>
+  </body>
 </html>
